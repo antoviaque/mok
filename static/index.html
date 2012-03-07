@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en"> <!--<![endif]-->
+<head>
+	<meta charset="utf-8" />
+
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width" />
+
+	<title>Monsters of Kindness - Tracking</title>
+    <meta name="Description" content="1) Be kind to a friend, 2) offer him a monster, 3) enjoy seeing kindness spread through the world!">
+    <meta property="og:title" content="Monsters of Kindness" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://monstersofkindness.com/" />
+    <meta property="og:image" content="http://monstersofkindness.com/img/monster_thanks.png" />
+  
+	<!-- Included CSS Files -->
+	<link rel="stylesheet" href="/css/all.css">
+
+	<!-- IE Fix for HTML5 Tags -->
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+</head>
+
+<body>
+<div id="fb-root"></div>
+
+	<div class="container">
+        <div class="shadow left"></div>
+
+        <div class="green">
+            <div>&nbsp;</div>
+            <div id="content"></div>            
+            <div>&nbsp;</div>
+        </div>
+        
+        <div class="shadow right"></div>
+    </div> 
+
+<!-- Templates -->
+
+<script type="text/template" id="mok_tpl_enter_code">
+    <h1 class="centered">Enter the code</h1>
+            
+    <div class="centered" style="padding: 10px;" >
+        <input class="mok_code_field" type="text" style="padding: 10px;" />
+    </div>
+
+    <div class="mok_error_message"></div>
+</script>
+
+<script type="text/template" id="mok_tpl_monster">
+    <h1 class="centered">Monster #{{_id}}</h1>
+    <div>Code: {{code}}</div>
+
+    <ul class="mok_ownership_list"></ul>
+</script>
+
+<script type="text/template" id="mok_tpl_new_ownership">
+    <div>Just got this monster? Register here:</div>
+    <ul>
+        <li>Location: <input class="mok_location" type="text" /></li>
+        <li>Deed: <textarea class="mok_deed" /></li>
+        <input type="submit" value="Record" />
+    </ul>
+</script>
+
+<script type="text/template" id="mok_tpl_ownership">
+    <li>Owner
+        <ul>
+            <li>Location: {{address}}</li>
+            <li>Deed: {{deed}}</li>
+        </ul>
+    </li>
+</script>
+
+<!-- JavaScript -->
+<script type="text/javascript" src="/js/dist/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="/js/dist/underscore-1.3.1.min.js"></script>
+<script type="text/javascript" src="/js/dist/handlebars-1.0.0.beta.6.js"></script>
+<script type="text/javascript" src="/js/dist/backbone-0.9.1.min.js"></script>
+<script type="text/javascript" src="/js/dist/backbone-relational-0.5.0.js"></script>
+<script type="text/javascript" src="/js/mok.js"></script>
+<script type="text/javascript">
+    (function($) {
+        $.mok.bootstrap();
+    })(jQuery);
+</script>
+
+</body>
+</html>

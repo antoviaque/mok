@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Monsters of Kindness - Tracking</title>
+    <link rel="stylesheet" type="text/css" href="css/mok.css" />
+</head>
+
+<body>
+
+<!-- Content -->
+<div id="ibid_chat">
+    <div id="header">
+        <h1>Ibid Webchat</h1>
+        <div id="logged_as"><span>Logged in as:</span> Test</div>
+    </div>
+    
+    <div id="section">
+        <div id="chatlog"></div>
+        
+        <div id="userlist"></div>
+        <form id="send-message-area" action="">
+            <textarea id="sendie" maxlength='100'></textarea>
+        </form>
+    </div>
+</div>
+
+<!-- Templates -->
+<script type="text/template" id="tpl-ibid-event">
+    <span class="message_time">{{view.short_date time}}</span>
+    <span class="message_sender">{{sender_nick}}</span>
+    <span class="message_content">{{message_stripped}}</span>
+    {{#responses}}
+        <div class="bot_answer">
+            <span class="message_time">{{../view.short_date ../time}}</span>
+            <span class="message_sender">Ibid</span>
+            <span class="message_content">{{reply}}</span>
+        </div>
+    {{/responses}}
+</script>
+
+<!-- JavaScript -->
+<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.3.1/underscore-min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/handlebars.js/1.0.0.beta2/handlebars.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/backbone.js/0.9.1/backbone-min.js"></script>
+<script src="webchat.js"></script>
+
+</body>
+</html>

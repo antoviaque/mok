@@ -1,0 +1,472 @@
+/*
+ * Copyright (C) 2011 Xavier Antoviaque <xavier@antoviaque.org>
+ *
+ * This software's license gives you freedom; you can copy, convey,
+ * propagate, redistribute and/or modify this program under the terms of
+ * the GNU Affero Gereral Public License (AGPL) as published by the Free
+ * Software Foundation (FSF), either version 3 of the License, or (at your
+ * option) any later version of the AGPL published by the FSF.
+ *
+ * This program is distributed in the hope that it will be useful, but
+ * WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Affero
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU Affero General Public License
+ * along with this program in a file in the toplevel directory called
+ * "AGPLv3".  If not, see <http://www.gnu.org/licenses/>.
+*/
+
+/* Fonts ***********************************************************/
+
+@font-face {
+    font-family: 'JennaSue';
+    src: url('../font/jennasue-webfont.eot');
+    src: url('../font/jennasue-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/jennasue-webfont.woff') format('woff'),
+         url('../font/jennasue-webfont.ttf') format('truetype'),
+         url('../font/jennasue-webfont.svg#JennaSueRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Sertig';
+    src: url('../font/sertig-webfont.eot');
+    src: url('../font/sertig-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../font/sertig-webfont.woff') format('woff'),
+         url('../font/sertig-webfont.ttf') format('truetype'),
+         url('../font/sertig-webfont.svg#SertigLight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+/* Global **********************************************************/
+
+html, body {
+    font-family: 'Sertig', 'Helvetica';
+    font-size: 20px;
+    line-height: 150%;
+    color: #B9C2A8;
+    padding: 0;
+    margin: 0;
+    background-color: #d2543b;
+}
+
+
+a {
+    color: #B9C2A8;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'JennaSue', 'Helvetica';
+    font-weight: normal;
+    color: #ffffff;
+    margin: 0.4em 0 0.2em 0;
+    padding: 0;
+}
+
+p, div {
+	line-height: 130%;
+}
+
+h1 {
+	font-size: 68px;
+}
+
+h2 {
+	font-size: 60px;
+}
+
+.container {
+	width: 932px;
+	position: relative;
+	left: 50%;
+	margin-left: -466px;
+}
+
+.shadow {
+	position: absolute;
+	height: 100%;
+	width: 21px;
+}
+
+.shadow.left {
+    background: transparent url('../img/shadow_left.png') repeat left top;
+	top: 0;
+	left: 0;
+	margin-left: -21px;
+}
+
+.shadow.right {
+    background: transparent url('../img/shadow_right.png') repeat right top;
+	top: 0;
+    right: 0;
+    margin-right: -21px;
+}
+
+.green {
+    background-image: url('../img/green_bkg.png');
+}
+
+.header {
+	width: 100%;
+	height: 433px;
+	background: #ffffff url('../img/header.jpg') no-repeat right top;
+	position: relative;
+}
+
+.header .plusone {
+	position: absolute;
+	right: 30px;
+	top: 10px;
+}
+
+.header .like {
+    position: absolute;
+    right: 70px;
+    top: 8px;
+}
+
+.centered {
+	text-align: center;
+}
+
+.infographic {
+	height: 1380px;
+	width: 932px;
+	position: relative; 
+}
+
+.first.arrow {
+	position: absolute;
+	top: 0px;
+	left: 340px;
+	background-image: url('../img/arrow1.png');
+	width: 116px;
+	height: 136px;
+}
+
+.step p {
+	font-family: 'Sertig', 'Helvetica';
+}
+
+.first.step .number {
+	position: absolute;
+	top: 165px;
+	left: 480px;
+	background-image: url('../img/1.png');
+	width: 68px;
+	height: 98px;
+}
+
+.first.step .illustration {
+	position: absolute;
+	left: 105px;
+	top: 85px;
+	background-image: url('../img/illustration1.png');
+	width: 302px;
+	height: 325px;
+}
+
+.first.step h2 {
+	position: absolute;
+	left: 570px;
+	top: 155px;
+}
+
+.first.step p {
+	position: absolute;
+	left: 570px;
+	top: 215px;
+}
+
+.second.arrow {
+    position: absolute;
+    top: 320px;
+    left: 370px;
+    background-image: url('../img/arrow2.png');
+    width: 270px;
+    height: 148px;
+}
+
+.second.step .number {
+    position: absolute;
+    top: 485px;
+    left: 100px;
+    background-image: url('../img/2.png');
+    width: 81px;
+    height: 102px;
+}
+
+.second.step .illustration {
+    position: absolute;
+    left: 610px;
+    top: 390px;
+    background-image: url('../img/illustration2.png');
+    width: 281px;
+    height: 339px;
+}
+
+.second.step h2 {
+    position: absolute;
+    left: 200px;
+    top: 475px;
+}
+
+.second.step p {
+    position: absolute;
+    left: 200px;
+    top: 530px;
+    width: 300px;
+}
+
+.third.arrow {
+    position: absolute;
+    top: 630px;
+    left: 360px;
+    background-image: url('../img/arrow3.png');
+    width: 262px;
+    height: 134px;
+}
+
+.third.step .number {
+    position: absolute;
+    top: 840px;
+    left: 460px;
+    background-image: url('../img/3.png');
+    width: 64px;
+    height: 102px;
+}
+
+.third.step .illustration {
+    position: absolute;
+    left: 110px;
+    top: 670px;
+    background-image: url('../img/illustration3.png');
+    width: 244px;
+    height: 336px;
+}
+
+.third.step h2 {
+    position: absolute;
+    left: 545px;
+    top: 830px;
+}
+
+.third.step p {
+    position: absolute;
+    left: 550px;
+    top: 890px;
+    width: 340px;
+}
+
+.fourth.arrow {
+    position: absolute;
+    top: 45px;
+    left: 10px;
+    background-image: url('../img/arrow4.png');
+    width: 564px;
+    height: 1336px;
+}
+
+.fourth.step .number {
+    position: absolute;
+    top: 1105px;
+    left: 90px;
+    background-image: url('../img/4.png');
+    width: 75px;
+    height: 117px;
+}
+
+.fourth.step h2 {
+    position: absolute;
+    left: 180px;
+    top: 1100px;
+}
+
+.fourth.step p {
+    position: absolute;
+    left: 180px;
+    top: 1160px;
+    width: 330px;
+}
+
+/* Buttons ****************/
+
+/* http://hellohappy.org/css3-buttons/ */
+
+button::-moz-focus-inner {
+    border: 0; 
+}
+ 
+button {
+    background-color: #264631;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #709240), color-stop(50%, #3a5c36), color-stop(50%, #2e532a), color-stop(100%, #436539));
+    background-image: -webkit-linear-gradient(top, #709240 0%, #3a5c36 50%, #2e532a 50%, #436539 100%);
+    background-image: -moz-linear-gradient(top, #709240 0%, #3a5c36 50%, #2e532a 50%, #436539 100%);
+    background-image: -ms-linear-gradient(top, #709240 0%, #3a5c36 50%, #2e532a 50%, #436539 100%);
+    background-image: -o-linear-gradient(top, #709240 0%, #3a5c36 50%, #2e532a 50%, #436539 100%);
+    background-image: linear-gradient(top, #709240 0%, #3a5c36 50%, #2e532a 50%, #436539 100%);
+    border: 1px solid #264631;
+    border-bottom: 1px solid #264631;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    -ms-border-radius: 5px;
+    -o-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: inset 0 1px 0 0 #B2B04B;
+    -moz-box-shadow: inset 0 1px 0 0 #B2B04B;
+    -ms-box-shadow: inset 0 1px 0 0 #B2B04B;
+    -o-box-shadow: inset 0 1px 0 0 #B2B04B;
+    box-shadow: inset 0 1px 0 0 #B2B04B;
+    color: #fff;
+    line-height: 70%;
+    padding: 3px 0 10px 0;
+    text-decoration: none;
+    text-align: center;
+    text-shadow: 0 -1px 1px #000f4d;
+}
+
+button:hover {
+    background-color: #264631;
+    background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #82a74c), color-stop(50%, #3a5c36), color-stop(50%, #2e532a), color-stop(100%, #507644));
+    background-image: -webkit-linear-gradient(top, #82a74c 0%, #3a5c36 50%, #2e532a 50%, #507644 100%);
+    background-image: -moz-linear-gradient(top, #82a74c 0%, #3a5c36 50%, #2e532a 50%, #507644 100%);
+    background-image: -ms-linear-gradient(top, #82a74c 0%, #3a5c36 50%, #2e532a 50%, #507644 100%);
+    background-image: -o-linear-gradient(top, #82a74c 0%, #3a5c36 50%, #2e532a 50%, #507644 100%);
+    background-image: linear-gradient(top, #82a74c 0%, #3a5c36 50%, #2e532a 50%, #507644 100%);
+    cursor: pointer; 
+}
+
+button:active {
+    -webkit-box-shadow: inset 0 0 20px 0 #82a74c, 0 1px 0 white;
+    -moz-box-shadow: inset 0 0 20px 0 #82a74c, 0 1px 0 white;
+    -ms-box-shadow: inset 0 0 20px 0 #82a74c, 0 1px 0 white;
+    -o-box-shadow: inset 0 0 20px 0 #82a74c, 0 1px 0 white;
+    box-shadow: inset 0 0 20px 0 #82a74c, 0 1px 0 white; 
+}
+
+.order {
+    font-family: 'JennaSue', 'Helvetica';
+    font-size: 60px;
+	width: 250px;
+    position: absolute;
+}
+
+.infographic .order {
+	left: 610px;
+    top: 1125px;
+}
+
+.order .smaller {
+    font-size: 45px;
+}
+
+.infographic .support {
+	position: absolute;
+	left: 680px;
+	top: 1200px;
+}
+
+/* Online tracking ******************/
+
+.beige {
+	background-image: url('../img/beige_bkg.png');
+}
+
+.beige .transition {
+	height: 63px;
+	width: 100%;
+	background: transparent url('../img/green_bottom.png') no-repeat center top;
+}
+
+.onlinetracking {
+    height: 500px;
+    width: 932px;
+    position: relative; 
+    color: #7D6B5D;
+	margin-top: 30px;
+}
+
+.onlinetracking h2 {
+    color: #7D6B5D;
+	position: absolute;
+	left: 620px;
+}
+
+.onlinetracking ul {
+    position: absolute;
+    font-size: 20px;
+    left: 620px;
+    top: 83px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 250px;
+}
+
+.onlinetracking ul li {
+	margin: 1em 0 1em 0;
+}
+
+.onlinetracking .illustration {
+	position: absolute;
+	left: 25px;
+	top: -5px;
+	background-image: url('../img/monster_map.png');
+	width: 526px;
+	height: 362px;
+}
+
+.onlinetracking .arrow {
+	position: absolute;
+	top: 35px;
+	left: 560px;
+	background-image: url('../img/bulletpoints.png');
+	width: 52px;
+	height: 285px;
+}
+
+.onlinetracking .order {
+    left: 50%;
+    margin-left: -125px;
+    top: 400px;
+}
+
+.onlinetracking .support {
+    position: absolute;
+    left: 50%;
+    margin-left: -50px;
+    top: 470px;
+    color: #7D6B5D;
+}
+
+/* Footer ********************************/
+
+.footer, .footer a {
+    background-color: #d2543b;
+    color: #76332A;
+}
+
+.footer .transition {
+	width: 956px;
+	height: 68px;
+	position: relative;
+	left: 50%;
+	margin-left: -477px;
+	background: transparent url('../img/beige_bottom.png') no-repeat center top;
+}
+
+.footer p {
+	width: 932px;
+	font-size: 8px;
+	position: relative;
+	left: 50%;
+	margin-left: -416px;
+	margin-top: -10px;
+	font-weight: bold;
+}
